@@ -1,17 +1,20 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import Mansion from '../assets/mansion.jpg'
-// import Mansion2 from '../assets/mansion2.jpg'
-
 
 const Hero = () => {
   return (
     <div>
-        <div className='w-full h-screen relative'>
-
-      <img className='w-full h-full bg-blend-color object-cover' src={Mansion} alt="/" />
+        <div className='w-full h-screen relative overflow-hidden'>
+            <motion.img 
+                initial={{ opacity: 0, scale: 1.1 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+                className='w-full h-full bg-blend-color object-cover' 
+                src={Mansion} 
+                alt="/" 
+            />
         </div>
-        
-       
     </div>
   )
 }   
